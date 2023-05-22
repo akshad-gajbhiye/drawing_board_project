@@ -1,0 +1,14 @@
+body {
+    background-color: aquamarine;
+    border: 2pt;
+    border-color: black;
+}
+
+#button {
+    padding: 5px;
+    border: 2px;
+}
+
+#dim {
+    background-color: aqua;
+}

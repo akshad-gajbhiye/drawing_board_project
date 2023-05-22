@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Drawing Board</title>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+          tex2jax: {
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            inlineMath: [['$','$']]
+          }
+        });
+      </script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript">
+    </script>
+</head>
+
+<body>
+    <h1>Drawing Board</h1>
+    <p>This webpage helps you to visualize simple geometrical shapes such as circle and rectangle.</p>
+
+    <h2>Circle</h2>
+    <p>The <em>area</em> of a circle with radius $r$ is given by $\pi r^2$. Similarly, the <em>perimeter</em> of a
+        circle with radius $r$ is given by $2 \pi r$. Now, let's visualize the circle using JavaScript and HTML.</p>
+    <span>Enter the radius $r$:</span>
+    <input type="number" id="radius">
+    <br>
+    <div id="button">
+        <button id="validate_radius">Validate Radius</button>
+        <button id="draw_circle">Draw</button>
+        <button id="compute_area_circumference">Compute Area/Circumference</button>
+    </div>
+    <p>Circle: NA.</p>
+    <canvas id="paper1" width="400px" height="400px" style="border:2px solid #000000;"></canvas>
+    <br>
+    <span id="dim">Paper size: $400 {\operatorname{px}}$ X $400 {\operatorname{px}}$. Max allowed radius: 200</span>
+
+    <h2>Rectangle</h2>
+    <p>The <em>area</em> of a rectangle with width $w$ and height $h$ is given by $w h$. Similarly, the
+        <em>perimeter</em> of a rectangle with width $w$ and height $h$ is given by $2(w+h)$. Now, let's visualize the
+        rectangle using JavaScript and HTML.</p>
+    <span>Enter the width $w$:</span>
+    <input type="number" id="width">
+    <span>Enter the height $h$:</span>
+    <input type="number" id="height">
+    <br>
+    <div id="button">
+        <button id="validate_width_height">Validate Width/Height</button>
+        <button id="draw_rectangle">Draw</button>
+        <button id="compute_area_perimeter">Compute Area/Perimeter</button>
+    </div>
+    <p>Rectangle: NA.</p>
+    <canvas id="paper2" width="600px" height="400px" style="border:2px solid #000000;"></canvas>
+    <br>
+    <span id="dim">Paper size: $600 {\operatorname{px}}$ X $400 {\operatorname{px}}$. Max allowed width: 600 and height:
+        400</spam>
+
+        <hr style="border:1px solid #000000;">
+        <br>
+        <button id="clear">Clear Inputs</button>
+
+        <script src="main.js"></script>
+</body>
+
+</html>
